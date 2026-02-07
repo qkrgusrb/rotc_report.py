@@ -49,5 +49,12 @@ for reason in sorted(absentees_dict.keys()):
 print("이상입니다.")
 
 
+# 3. 파일 저장 실행
+file_name = f"보고_{date.replace('/', '_')}.txt" # 파일명에 /가 들어가면 에러날 수 있어 변환
+with open(file_name, "w", encoding="utf-8") as f:
+    f.write(report_text)
+
+print(f"\n시스템: {file_name} 파일로 저장이 완료되었습니다.")
+
 
 
